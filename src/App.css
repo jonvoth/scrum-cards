@@ -18,6 +18,7 @@
   user-select: none;
   font-weight: bold;
   color: white;
+  transform: translateY(-10%);
 }
 
 .btn-toggle-scale {
@@ -31,6 +32,8 @@
   padding: 0.5em;
   font-size: 2vw;
   font-weight: bold;
+  min-height: 40px;
+  min-width: 40px;
 }
 
 .input-estimate-range {
@@ -40,6 +43,7 @@
   width: 96vw;
   min-height: 40px;
   -webkit-appearance: none;
+  appearance: none;
   border: none;
   background: #757575;
   height: 4vh;
@@ -61,18 +65,27 @@
 }
 
 .input-estimate-range::-moz-range-thumb {
+  -moz-appearance: none;
   height: 4vh;
   min-height: 40px;
   min-width: 40px;
-  -moz-appearance: none;
+  width: 10%;
   background: #fdfdfd;
+  border-radius: 0;
 }
 
 .input-estimate-range::-ms-thumb {
   height: 4vh;
   min-height: 40px;
   min-width: 40px;
+  width: 10%;
   background: #fdfdfd;
+}
+.input-estimate-range::-ms-fill-lower {
+  background: #757575;
+}
+.input-estimate-range::-ms-fill-upper {
+  background: #757575;
 }
 
 .visually-hidden {
