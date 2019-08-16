@@ -1,33 +1,88 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-items: center;
+  background: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.estimate-display-container {
+  margin: 0;
+  font-size: 46vw;
+  user-select: none;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-toggle-scale {
+  position: fixed;
+  right: 2vw;
+  top: 2vh;
+  -webkit-appearance: none;
+  background: #757575;
+  color: #fdfdfd;
+  border: none;
+  padding: 0.5em;
+  font-size: 2vw;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.input-estimate-range {
+  position: fixed;
+  right: 2vw;
+  bottom: 2vh;
+  width: 96vw;
+  min-height: 40px;
+  -webkit-appearance: none;
+  border: none;
+  background: #757575;
+  height: 4vh;
+}
+
+@media screen and (min-width: 800px) {
+  .input-estimate-range {
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.input-estimate-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 4vh;
+  min-height: 40px;
+  min-width: 40px;
+  width: 10%;
+  background: #fdfdfd;
+}
+
+.input-estimate-range::-moz-range-thumb {
+  height: 4vh;
+  min-height: 40px;
+  min-width: 40px;
+  -moz-appearance: none;
+  background: #fdfdfd;
+}
+
+.input-estimate-range::-ms-thumb {
+  height: 4vh;
+  min-height: 40px;
+  min-width: 40px;
+  background: #fdfdfd;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  /* added line */
 }
